@@ -1,0 +1,11 @@
+[Unit]
+Description=NitroSense platform interfaces
+Before=nitrosense-hardware.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/nitrosense/setup-platform
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

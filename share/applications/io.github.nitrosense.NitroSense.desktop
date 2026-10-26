@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=NitroSense
+Comment=Performance centre for Acer Nitro laptops
+Exec=nitrosense
+Icon=io.github.nitrosense.NitroSense
+Terminal=false
+Type=Application
+Categories=Settings;
+StartupNotify=true
+Keywords=nitro;acer;fan;gpu;performance;gaming;

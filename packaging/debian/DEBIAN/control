@@ -1,0 +1,10 @@
+Package: nitrosense
+Version: 0.5.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.10), python3-gi, python3-gi-cairo, python3-cairo, gir1.2-gtk-4.0 (>= 4.12), gir1.2-adw-1 (>= 1.2), polkitd, pkexec, mangohud
+Recommends: dkms
+Maintainer: NitroSense contributors
+Description: Native Acer Nitro performance centre for Linux
+ Low-overhead telemetry, cooling, keyboard and guarded tuning controls.

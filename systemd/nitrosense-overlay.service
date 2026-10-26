@@ -1,0 +1,7 @@
+[Unit]
+Description=NitroSense game telemetry overlay
+
+[Service]
+ExecStart=/usr/bin/nitrosense-overlay
+Restart=on-failure
+RestartSec=2

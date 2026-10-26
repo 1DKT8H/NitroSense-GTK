@@ -1,0 +1,12 @@
+[Unit]
+Description=NitroSense application key
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/python3 -I -m nitrosense.hotkeys
+Restart=on-failure
+MemoryMax=48M
+
+[Install]
+WantedBy=default.target

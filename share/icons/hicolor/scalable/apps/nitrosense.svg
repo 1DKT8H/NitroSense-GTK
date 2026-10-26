@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="tile" x2="0.8" y2="1">
+      <stop stop-color="#1c2230"/>
+      <stop offset="1" stop-color="#10141d"/>
+    </linearGradient>
+    <linearGradient id="nitro" x1="0" y1="0" x2="0.85" y2="1">
+      <stop stop-color="#e6c9ff"/>
+      <stop offset="0.5" stop-color="#b58cf5"/>
+      <stop offset="1" stop-color="#8050d8"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="52" fill="url(#tile)"/>
+  <path d="M87 24 143 103 169 46 169 172 131 232 131 142 109 103 109 167 87 143Z"
+        fill="url(#nitro)"/>
+</svg>

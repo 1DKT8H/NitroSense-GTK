@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nitrosense"
+version = "0.5.0"
+description = "A safe, native Linux control centre for Acer Nitro laptops"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0-or-later"}
+dependencies = ["PyGObject>=3.46", "pycairo>=1.20"]
+
+[project.scripts]
+nitrosense = "nitrosense.app:main"
+nitrosense-game = "nitrosense.overlay:main"
+nitrosense-hotkey = "nitrosense.hotkeys:dispatch"
+nitrosense-helper = "nitrosense.helper:main"
+nitrosense-overlay = "nitrosense.overlay:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+update-desktop-database -q /usr/share/applications 2>/dev/null || true
+gtk-update-icon-cache -q /usr/share/icons/hicolor 2>/dev/null || true
+# RGB source is bundled, but the DKMS module is activated separately in the UI.
+if [ -d /run/systemd/system ]; then
+    systemctl daemon-reload
+    systemctl enable nitrosense-hardware.service
+    systemctl restart nitrosense-platform.service || true
+    systemctl restart nitrosense-hardware.service
+fi

@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+model=$(tr -d '\n' < /sys/class/dmi/id/product_name)
+vendor=$(tr -d '\n' < /sys/class/dmi/id/sys_vendor)
+if [ "$vendor" = Acer ] && { [ "$model" = "Nitro AN515-55" ] || [ "$model" = AN515-55 ]; }; then
+    /sbin/modprobe ec_sys write_support=1
+    /sbin/modprobe msr
+fi

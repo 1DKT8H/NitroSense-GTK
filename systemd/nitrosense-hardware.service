@@ -1,0 +1,25 @@
+[Unit]
+Description=NitroSense hardware telemetry
+After=systemd-modules-load.service nitrosense-platform.service
+Wants=nitrosense-platform.service
+
+[Service]
+ExecStart=/usr/bin/python3 -I -m nitrosense.broker
+RuntimeDirectory=nitrosense
+RuntimeDirectoryMode=0755
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+RestrictAddressFamilies=AF_UNIX
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+LockPersonality=yes
+MemoryMax=64M
+CPUQuota=10%
+
+[Install]
+WantedBy=multi-user.target

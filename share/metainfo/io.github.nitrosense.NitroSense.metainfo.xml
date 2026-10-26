@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.nitrosense.NitroSense</id>
+  <name>NitroSense</name>
+  <summary>A performance centre for Acer Nitro laptops</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <launchable type="desktop-id">io.github.nitrosense.NitroSense.desktop</launchable>
+  <description><p>Native, low-overhead fan, telemetry and performance controls focused on the AN515-55.</p></description>
+  <provides><binary>nitrosense</binary></provides>
+  <categories><category>System</category><category>Settings</category></categories>
+  <content_rating type="oars-1.1"/>
+</component>
